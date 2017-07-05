@@ -1,6 +1,5 @@
 # piglatin
 
-In this assignment you will write a program to translate English sentences into "Pig Latin."
 
 Pig Latin is a "secret" language used by children, often in the belief that their parents won't understand them. The rules are simple:
 
@@ -24,19 +23,27 @@ You may handle the above if you like, but we won't test for them.
 
 def is_vowel(ch)
 Return True if ch is a vowel, False if it isn't.
+
 def cut(word)
 Given a word (as defined above), return a 2-tuple. The first element of the tuple is the string of consonants at the beginning of the word (could be the empty string), and the second element is a string of all the remaining characters. For example, cut("String") should return the tuple ("Str", "ing").
+
 def piggify_word(word)
 Returns the Pig Latin version of a single word. (Hint: Use the cut function.)
+
 def clean_word(raw_word)
 "Cleans" the given "raw" word by removing any non-letter characters from the end, and returning a 2-tuple of the cleaned word and the removed characters. For example, clean_word("Wow!") should return ("Wow", "!").
+
 def get_raw_words(sentence)
 Uses the space character (' ') to separate the sentence into a list of word-like chunks ("raw" words), and returns that list of chunks. For example, get_raw_words("Madam, I'm Adam.") should return the list ["Madam,", "I'm", "Adam."].
+
 def piggify_pairs(pair_list)
 Takes a list of (word, punctuation) pairs and returns the corresponding list of ("piggified" word, punctuation) pairs. For example, piggify_pairs([("hi", ""), ("there", "!")]) should return [("ihay", ""), ("erethay", "!")].
+
 def reassemble(pair_list)
 Reassembles a list of (word, punctuation) pairs into a sentence. The word and its associated punctuation are concatenated, and the words are assembled into a sentence, with spaces between words (but no space at the beginning or at the end). For example, reassemble([("ihay", ""), ("erethay", "!")]) should return "ihay erethay!".
+
 def piggify_sentence(sentence)
 Takes a sentence, turns each word in the sentence into the corresponding Pig Latin version, then returns the altered sentence. Punctuation is preserved.
+
 def main()
-Ask the user to type in sentences. For each line th
+Ask the user to type in sentences. For each line that is read in, the function prints out the corresponding Pig Latin version. Quits the program (by reaching the end of the main method) when the user enters a blank line. This is the only function that does input/output, and is the only function that does not require a unit test.
